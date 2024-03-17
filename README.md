@@ -1,11 +1,17 @@
-# js-lab-149
-### Lab 149 ES6: ฟังก์ชันที่ใช้คุณสมบัติของ Spread operator
-จงเขียนฟังก์ชันที่ใช้คุณสมบัติของ Spread operator เพื่อรับค่า array1แล้วคืนค่าเป็น array ที่มีการเปลี่ยนแปลงค่าของ index ที่ 3 ให้มีค่าเท่ากับ ค่าเดิมยกกำลัง 2 โดยที่ array1 ไม่เกิดการเปลี่ยนแปลง
+# js-lab-150
+### Lab 150 ES6: ฟังก์ชันที่รับค่า ชื่อ นามสกุล และ งานอดิเรก
+จงเขียนฟังก์ชันที่รับค่า ชื่อ นามสกุล และ งานอดิเรก ซึ่งงานอดิเรกอาจมี 1 หรือมากกว่า 1 ก็ได้ แล้วคืนค่าเป็น ชื่อ, นามสกุล, งานอดิเรก และจำนวนงานอดิเรก โดยใช้คุณสมบัติของ spread parameter
 
 ```JavaScript
-const array1 = [1, 2, 3, 4, 5];
-const modifiedArray = modifyArray(array1);
+const personInfo1 = getInfo('Alice', 'Smith', 'Drawing');
+console.log(personInfo1);
+// { name: 'Alice', lastName: 'Smith', hobbies: ['Drawing'], numberOfHobbies: 1 }
 
-console.log(array1); // [1, 2, 3, 4, 5]
-console.log(modifiedArray); // [1, 2, 3, 16, 5]
+const personInfo2 = getInfo('Bob', 'Johnson', 'Cooking', 'Fishing', 'Gardening');
+console.log(personInfo2);
+// { name: 'Bob', lastName: 'Johnson', hobbies: ['Cooking', 'Fishing', 'Gardening'], numberOfHobbies: 3 }
+
+const personInfo3 = getInfo('Eve', 'Brown');
+console.log(personInfo3);
+// { name: 'Eve', lastName: 'Brown', hobbies: [], numberOfHobbies: 0 }
 ```
